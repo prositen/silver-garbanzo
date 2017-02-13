@@ -10,7 +10,9 @@ if [[ -d ${DIRECTORY} ]]; then
     if [ -f ${DIRECTORY}/_Sidebar.md ]; then
         rm ${DIRECTORY}/_Sidebar.md
     fi
-    for MDFILE in `ls -1 ${DIRECTORY}/*.md`; do
+
+    for MDFILE in ${DIRECTORY}/*.md
+    do
         NAME="$(basename "$MDFILE")"
         NAME="${NAME%.*}"
         echo ${NAME}
