@@ -25,7 +25,7 @@ function echo_directories {
     do
         if [[ -d ${DIR} ]]; then
             NAME="$(basename "$DIR")"
-            echo "* [${NAME}/Index](${NAME}/${NAME}_Index)" >> $2
+            echo "* [${NAME}/Index](${NAME}_Index)" >> $2
         fi
     done
 }
